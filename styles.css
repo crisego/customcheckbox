@@ -1,0 +1,25 @@
+input[name="activo"]{
+    display:none;
+}
+.customcheck{
+    width: 80px;
+height: 20px;
+border: 3px solid #BDBDBD;
+border-radius: 20px;
+background: #d8d8d8;
+}
+.checkitem {
+    width: 14px;
+    height: 14px;
+    border-radius: 16px;
+    border: 2px solid #484848;
+    background-color: #696969;
+    margin: 1px;
+    margin-left: 2px;
+    transition: all 0.5s ease;
+}
+.itemactive{
+    margin-left: 60px;
+    border: 2px solid #0ebd0e;
+    background-color: #24da24;
+}
