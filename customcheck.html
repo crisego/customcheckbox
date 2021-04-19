@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    input[name="activo"]{
+        display:none;
+    }
+    .customcheck{
+        width: 80px;
+    height: 20px;
+    border: 3px solid #BDBDBD;
+    border-radius: 20px;
+    background: #d8d8d8;
+    }
+    .checkitem {
+        width: 14px;
+        height: 14px;
+        border-radius: 16px;
+        border: 2px solid #484848;
+        background-color: #696969;
+        margin: 1px;
+        margin-left: 2px;
+        transition: all 0.5s ease;
+    }
+    .itemactive{
+        margin-left: 60px;
+        border: 2px solid #0ebd0e;
+        background-color: #24da24;
+    }
+    </style>
+</head>
+<body>
+    <input type="checkbox" name="activo">
+    <div class="customcheck"><div class="checkitem"></div></div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
+            $(".checkitem").click(function(){
+                var item = $(".checkitem");
+                if (item.hasClass("itemactive")){
+                    //Esta activado. Desactivar!
+                    item.removeClass("itemactive");
+                    $(".customcheck").css("background-color", "#d8d8d8")
+                    $("input[name='activo']").prop("checked", false);
+                } else {
+                    //Esta desactivado. Activar!
+                    item.addClass("itemactive");
+                    $(".customcheck").css("background-color", "#befbbe")
+                    $("input[name='activo']").prop("checked", true);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
